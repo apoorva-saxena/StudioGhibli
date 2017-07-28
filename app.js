@@ -31,6 +31,8 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+//setting the port
+app.set('port', process.env.PORT || 3000);
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -42,5 +44,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
