@@ -1,27 +1,49 @@
 (function() {
-	const app = angular.module('Studio', []);
+    var app = angular.module("Studio", ["ngRoute"]);
+    app.config(function($routeProvider) {
+        $routeProvider
+            .when("/", {
+                templatUrl: "main.html"
+            })
+            .when("/films", {
+                templateUrl: "films.html",
+                controller: filmsController
+            })
+            .when("/people", {
+                templateUrl: "people.html"
+            })
+            .when("/locations", {
+                templateUrl: "locations.html"
+            })
+            .when("/species", {
+                templateUrl: "species.html"
+            })
+            .when("/vehicles", {
+                templateUrl: "vehicles.html"
+            })
+    });
 
-	app.controller('StoreController', function() {
-		this.tabs = tabs 
-	})
+    const tabs = [
 
-	var tabs = [
-	{
-		name: 'Films',
+        {
+            domain: 'films',
+        },
+        {
+            domain: 'people',
+        },
+        {
+            domain: 'locations',
+        },
+        {
+            domain: 'species',
+        },
+        {
+            domain: 'vehicles',
+        }
+    ];
 
-	},
-	{
-		name: 'People',
-	},
-	{
-		name: 'Locations',
-	},
-	{
-		name: 'Species',
-	},
-	{
-		name: 'Vehicles',
-	}
-	]
+    app.controller('StudioController', function() {
+        this.tabs = tabs
+    });
 
 })();

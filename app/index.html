@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html ng-app="Studio">
-  <head>
-    <script type="text/javascript" src="angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-  </head>
 
-  <body ng-controller="StoreController as store">
+<head>
+    <!-- <script src="angular.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <style>
+    .capitalize {
+        text-align: center;
+        text-transform: capitalize;
+    }
+    </style>
+</head>
+
+<body ng-controller="StudioController as studio">
     <h1> Studio Ghibli </h1>
-    <span ng-repeat="tab in store.tabs">
-    	<a href="/{{tab.name}}">{{tab.name}}</a>
+    <div> <a href="#/!">Home</a> </div>
+    <span ng-repeat="tab in studio.tabs">
+        <a href="#!{{tab.domain}}" class="capitalize">{{tab.domain}}</a>
     </span>
+    <div ng-view></div>
+</body>
 
-  </body>
 </html>
