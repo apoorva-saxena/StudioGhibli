@@ -46,11 +46,19 @@ server.get('/api/locations', function(req, res) {
 })
 
 server.get('/api/species', function(req, res) {
-	async function getAllFilms () {
-		const all_films = await films.getFilms()
-		res.send(all_films);
+	async function getAllSpecies () {
+		const all_species = await species.getspecies()
+		res.send(all_species);
 	}
-	getAllFilms()
+	getAllSpecies()
+})
+
+server.get('/api/vehicles', function(req, res) {
+	async function getAllVehicles () {
+		const all_vehicles = await vehicles.getVehicles()
+		res.send(all_vehicles);
+	}
+	getAllVehicles()
 })
 
 //listen to server
