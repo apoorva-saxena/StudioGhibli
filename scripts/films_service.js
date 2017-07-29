@@ -1,10 +1,23 @@
 const request = require('request')
 
-function getFilms() {
-    request('https://ghibliapi.herokuapp.com/films', function(error, response, body) {
-        console.log('body:', body); // Print the HTML for the Google homepage.
-    });
+function log(obj) {
+    console.log(require('util').inspect(obj, false, null));
 }
 
+var films = {
 
-getFilms();
+    getFilms: async function() {
+        return new Promise(function(resolve, reject) {
+            request('https://ghibliapi.herokuapp.com/films', function(error, response, body) {
+                try {
+                    resolve(JSON.parse(body));
+                } catch (e) {
+                    reject(e);
+                }
+            })
+        })
+    }
+
+};
+
+module.exports = films;
