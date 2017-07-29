@@ -7,7 +7,7 @@
             })
             .when("/films", {
                 templateUrl: "films.html",
-                controller: filmsController
+                // controller: filmsController
             })
             .when("/people", {
                 templateUrl: "people.html"
