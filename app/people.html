@@ -2,7 +2,7 @@
 <div ng-controller="PeopleController">
 <h3 class="header"> People </h3>
 <div class=container>
-	Search: <input type="text" ng-model="search_text"/> 
+	Search: <input type="text" ng-model="search_text" class="search_box"/> 
 </div>
 <div ng-repeat="people in people_data | filter:search_text" class="text_color">
 	<br>
