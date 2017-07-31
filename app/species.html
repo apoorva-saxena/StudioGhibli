@@ -1,1 +1,14 @@
-I am species 
+<div ng-controller="SpeciesController">
+	<div ng-repeat="species in species_data | limitTo:5">
+		<br>
+		Name : {{species.name}}
+		<br>
+		Classification : {{species.classification}}
+		<br>
+		Eye Colors : {{species.eye_colors}}
+		<br>
+		Hair Colors : {{species.hair_colors}}
+		<br>
+
+	</div>
+</div>

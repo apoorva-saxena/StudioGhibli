@@ -73,4 +73,22 @@
         });
     })
 
+    app.controller('SpeciesController', function($http, $scope) {
+        return $http({
+            method: 'GET',
+            url: 'http://localhost:8080/api/species'
+        }).then(function successCallback(response) {
+            $scope.species_data = response.data
+        });
+    })
+
+    app.controller('VehiclesController', function($http, $scope) {
+        return $http({
+            method: 'GET',
+            url: 'http://localhost:8080/api/vehicles'
+        }).then(function successCallback(response) {
+            $scope.vehicles_data = response.data
+        });
+    })
+
 })();

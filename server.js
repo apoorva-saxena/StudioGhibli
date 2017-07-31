@@ -47,7 +47,7 @@ server.get('/api/locations', function(req, res) {
 
 server.get('/api/species', function(req, res) {
 	async function getAllSpecies () {
-		const all_species = await species.getspecies()
+		const all_species = await species.getSpecies()
 		res.send(all_species);
 	}
 	getAllSpecies()

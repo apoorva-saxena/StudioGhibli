@@ -1,1 +1,15 @@
-I am vehicles
+<div ng-controller="VehiclesController">
+	<div ng-repeat="vehicle in vehicles_data | limitTo:5">
+		<br>
+		Name : {{vehicle.name}}
+		<br>
+		Description : {{vehicle.description}}
+		<br>
+		Class : {{vehicle.vehicle_class}}
+		<br>
+		Length : {{vehicle.length}}
+		<br>
+		
+
+	</div>
+</div>
