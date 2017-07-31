@@ -1,1 +1,16 @@
-I am films
+<div ng-controller="FilmsController">
+	<div ng-repeat="film in films_data | limitTo:5">
+		<br>
+		Name : {{film.title}}
+		<br>
+		Description : {{film.description}}
+		<br>
+		Director : {{film.director}}
+		<br>
+		Producer : {{film.producer}}
+		<br>
+		Release Date : {{film.release_date}}
+		<br>
+
+	</div>
+</div>

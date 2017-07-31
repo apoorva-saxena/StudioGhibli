@@ -46,4 +46,13 @@
         this.tabs = tabs
     });
 
+    app.controller('FilmsController', function($http, $scope) {
+        return $http({
+            method: 'GET',
+            url: 'http://localhost:8080/api/films'
+        }).then(function successCallback(response) {
+        	$scope.films_data = response.data
+        });
+    })
+
 })();
