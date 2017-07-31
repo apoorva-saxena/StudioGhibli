@@ -1,15 +1,17 @@
 <div ng-controller="LocationsController">
-<h3> Locations </h3>
-	<div ng-repeat="location in location_data ">
-		<br>
-		Location Name : {{location.name}}
-		<br>
-		Climate : {{location.climate}}
-		<br>
-		Terrain : {{location.terrain}}
-		<br>
-		Surface Water : {{location.surface_water}}
-		<br>
-
-	</div>
+<h3 class="header"> Locations </h3>
+<div class=container>
+	Search: <input type="text" ng-model="search_text"/> 
+</div>
+<div ng-repeat="location in location_data | filter:search_text" class="text_color">
+	<br>
+	Location Name : {{location.name}}
+	<br>
+	Climate : {{location.climate}}
+	<br>
+	Terrain : {{location.terrain}}
+	<br>
+	Surface Water : {{location.surface_water}}
+	<br>
+</div>
 </div>

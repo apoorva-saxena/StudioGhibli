@@ -1,17 +1,20 @@
 <div ng-controller="FilmsController">
-<h3> Films </h3>
-	<div ng-repeat="film in films_data">
-		<br>
-		Name : {{film.title}}
-		<br>
-		Description : {{film.description}}
-		<br>
-		Director : {{film.director}}
-		<br>
-		Producer : {{film.producer}}
-		<br>
-		Release Date : {{film.release_date}}
-		<br>
+<h3 class="header"> Films </h3>
+<div class=container>
+	Search: <input type="text" ng-model="search_text"/> 
+</div>
+<div ng-repeat="film in films_data | filter:search_text" class="text_color">
+	<br>
+	Name : {{film.title}}
+	<br>
+	Description : {{film.description}}
+	<br>
+	Director : {{film.director}}
+	<br>
+	Producer : {{film.producer}}
+	<br>
+	Release Date : {{film.release_date}}
+	<br>
 
-	</div>
+</div>
 </div>
