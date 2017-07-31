@@ -51,7 +51,7 @@
             method: 'GET',
             url: 'http://localhost:8080/api/films'
         }).then(function successCallback(response) {
-        	$scope.films_data = response.data
+            $scope.films_data = response.data
         });
     })
 
@@ -60,7 +60,16 @@
             method: 'GET',
             url: 'http://localhost:8080/api/people'
         }).then(function successCallback(response) {
-        	$scope.people_data = response.data
+            $scope.people_data = response.data
+        });
+    })
+
+    app.controller('LocationsController', function($http, $scope) {
+        return $http({
+            method: 'GET',
+            url: 'http://localhost:8080/api/locations'
+        }).then(function successCallback(response) {
+            $scope.location_data = response.data
         });
     })
 

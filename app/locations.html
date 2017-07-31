@@ -1,15 +1,13 @@
-<div ng-controller="FilmsController">
-	<div ng-repeat="film in films_data | limitTo:5">
+<div ng-controller="LocationsController">
+	<div ng-repeat="location in location_data | limitTo:5">
 		<br>
-		Name : {{film.title}}
+		Location Name : {{location.name}}
 		<br>
-		Description : {{film.description}}
+		Climate : {{location.climate}}
 		<br>
-		Director : {{film.director}}
+		Terrain : {{location.terrain}}
 		<br>
-		Producer : {{film.producer}}
-		<br>
-		Release Date : {{film.release_date}}
+		Surface Water : {{location.surface_water}}
 		<br>
 
 	</div>
