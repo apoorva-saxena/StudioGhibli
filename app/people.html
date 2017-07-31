@@ -1,1 +1,16 @@
-I am people 
+<div ng-controller="PeopleController">
+	<div ng-repeat="people in people_data | limitTo:5">
+		<br>
+		Name : {{people.name}}
+		<br>
+		Gender : {{people.gender}}
+		<br>
+		Age : {{people.age}}
+		<br>
+		Eye Color : {{people.eye_color}}
+		<br>
+		Hair Color : {{people.hair_color}}
+		<br>
+
+	</div>
+</div>

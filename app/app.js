@@ -55,4 +55,13 @@
         });
     })
 
+    app.controller('PeopleController', function($http, $scope) {
+        return $http({
+            method: 'GET',
+            url: 'http://localhost:8080/api/people'
+        }).then(function successCallback(response) {
+        	$scope.people_data = response.data
+        });
+    })
+
 })();
