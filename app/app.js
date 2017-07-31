@@ -3,7 +3,7 @@
     app.config(function($routeProvider) {
         $routeProvider
             .when("/", {
-                template: "<br>Know everything about the famous Ghibli Movies"
+                templateUrl: "main.html"
             })
             .when("/films", {
                 templateUrl: "films.html",
