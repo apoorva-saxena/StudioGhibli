@@ -12,7 +12,7 @@ using the api : https://ghibliapi.herokuapp.com/
 
 ## Setup
 
-
+Just run :
 ```
 $ node server.js
 
